@@ -1,0 +1,9 @@
+<article class="slide" data-number="76" data-type="list" data-section="Customization">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Common Pitfalls</h1>
+    
+    <ul class="slide-list"><li>❌ <strong>Running CLI from home directory</strong> — exposes too many files to the agent</li><li>❌ <strong>Using <code>--allow-all-tools</code> in untrusted repos</strong> — the agent can run anything you can</li><li>❌ <strong>Approving a tool "for the session"</strong> — means ALL uses (e.g., approving <code>rm</code> allows <code>rm -rf ./*</code>)</li><li>❌ <strong>Overloading context</strong> — too many tools or instructions reduces quality</li><li>❌ <strong>Skipping setup steps</strong> — the cloud agent wastes time discovering dependencies</li><li>❌ <strong>Overly broad issues</strong> — "Rewrite the codebase" will not go well</li></ul>
+  </div>
+  <aside class="speaker-notes" hidden>A few things to watch out for. Always launch the CLI from your project directory, not your home directory — otherwise the agent can see all your files. Be careful with tool approvals — approving `rm` for the session means the agent can delete anything without asking again. Don&#x27;t overload with context — too many MCP servers or instructions can actually reduce quality. And for cloud agents, always create a `copilot-setup-steps.yml` workflow to pre-install dependencies.</aside>
+</article>

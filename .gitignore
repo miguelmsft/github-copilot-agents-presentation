@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+github-copilot-agents_2026-04-04_1700_v1/
+github-copilot-agents_2026-04-04_2236_v2/

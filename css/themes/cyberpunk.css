@@ -1,0 +1,110 @@
+/* ============================================================
+   THEME: Cyberpunk — Dark, neon pink/cyan, grid
+   ============================================================ */
+
+[data-theme="cyberpunk"] {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-card: rgba(255,255,255,0.03);
+  --border-card: rgba(0,255,255,0.1);
+  --text-primary: #e0e0e8;
+  --text-secondary: rgba(224,224,232,0.65);
+  --accent-primary: #00ffd5;
+  --accent-secondary: #ff2d95;
+  --gradient-title: linear-gradient(135deg, #00ffd5, #ff2d95);
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Grid background */
+[data-theme="cyberpunk"] #presentation::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,255,213,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,213,0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="cyberpunk"] .code-block {
+  background: rgba(0,0,0,0.5);
+  border-color: rgba(0,255,213,0.12);
+  color: #e0e0e8;
+}
+
+[data-theme="cyberpunk"] .code-block .kw  { color: #ff2d95; }
+[data-theme="cyberpunk"] .code-block .str { color: #00ffd5; }
+[data-theme="cyberpunk"] .code-block .cmt { color: #555566; }
+[data-theme="cyberpunk"] .code-block .fn  { color: #bf5fff; }
+[data-theme="cyberpunk"] .code-block .num { color: #ffcc00; }
+
+[data-theme="cyberpunk"] .slide-table thead th {
+  background: rgba(0,255,213,0.06);
+  color: #00ffd5;
+}
+
+[data-theme="cyberpunk"] .slide-table tbody td {
+  border-top-color: rgba(0,255,213,0.08);
+}
+
+[data-theme="cyberpunk"] .slide[data-type="title-slide"] .slide-bg::before {
+  background: radial-gradient(circle, rgba(255,45,149,0.1) 0%, transparent 60%);
+}
+
+[data-theme="cyberpunk"] .slide[data-type="title-slide"] .slide-bg::after {
+  background: radial-gradient(circle, rgba(0,255,213,0.08) 0%, transparent 60%);
+}
+
+[data-theme="cyberpunk"] .card {
+  background: rgba(0,255,213,0.03);
+  border-color: rgba(0,255,213,0.1);
+  backdrop-filter: blur(12px);
+}
+
+[data-theme="cyberpunk"] .card:hover {
+  border-color: rgba(255,45,149,0.3);
+  box-shadow: 0 0 20px rgba(255,45,149,0.1);
+}
+
+[data-theme="cyberpunk"] .card-title {
+  color: #ff2d95;
+}
+
+[data-theme="cyberpunk"] .diagram-block {
+  background: rgba(0,0,0,0.4);
+  border-color: rgba(0,255,213,0.1);
+  color: #00ffd5;
+}
+
+[data-theme="cyberpunk"] .slide-quote {
+  background: rgba(0,255,213,0.03);
+  border-color: #ff2d95;
+}
+
+[data-theme="cyberpunk"] .demo-badge {
+  border-color: #ff2d95;
+  color: #ff2d95;
+  background: linear-gradient(135deg, rgba(255,45,149,0.12), rgba(0,255,213,0.08));
+}
+
+[data-theme="cyberpunk"] .speaker-notes-overlay {
+  background: rgba(10,10,15,0.92);
+  border-top-color: rgba(0,255,213,0.1);
+}
+
+[data-theme="cyberpunk"] #progress-bar {
+  background: linear-gradient(135deg, #00ffd5, #ff2d95);
+}
+
+[data-theme="cyberpunk"] .slide-list li::before {
+  background: #00ffd5;
+}
+
+[data-theme="cyberpunk"] ol.slide-list li::before {
+  background: #ff2d95;
+  color: #0a0a0f;
+}

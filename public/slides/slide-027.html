@@ -1,0 +1,30 @@
+<article class="slide" data-number="27" data-type="diagram" data-section="Agent Types">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Cloud Agent — How It Works</h1>
+    
+    <div class="flow-container">
+      <div class="flow-step"><div class="flow-step-title">👤 YOU</div><div class="flow-step-desc">"Fix issue #42"</div></div>
+      <div class="flow-connector"></div>
+      <div class="flow-step" style="min-width: 380px;">
+        <div class="flow-step-title">☁️ CLOUD AGENT</div>
+        <div class="flow-step-desc" style="text-align: left;">
+          1. Spins up ephemeral environment<br>
+          2. Clones repository<br>
+          3. Researches codebase<br>
+          4. Creates implementation plan<br>
+          5. Writes code iteratively<br>
+          6. Runs tests &amp; linters<br>
+          7. Runs security scans (CodeQL)<br>
+          8. Self-reviews with Copilot review<br>
+          9. Creates copilot/ branch<br>
+          10. Opens draft PR
+        </div>
+        <div class="flow-label">Ephemeral GitHub Actions Runner</div>
+      </div>
+      <div class="flow-connector"></div>
+      <div class="flow-step flow-highlight"><div class="flow-step-title">👥 TEAM</div><div class="flow-step-desc">Reviews PR → Approves → Merges</div></div>
+    </div>
+  </div>
+  <aside class="speaker-notes" hidden>Here&#x27;s the step-by-step flow. The agent creates a fresh, ephemeral environment — like a clean CI container. It clones your repo, researches the code, creates a plan, and then iteratively writes code, tests, and scans for security issues. It even runs Copilot code review on its own changes before opening the PR. Everything happens on a `copilot/` branch — it can&#x27;t push to main or merge. A human always reviews and merges.</aside>
+</article>

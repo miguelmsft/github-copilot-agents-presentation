@@ -1,0 +1,11 @@
+<article class="slide" data-number="29" data-type="list" data-section="Agent Types">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Cloud Agent — Built-in Security</h1>
+    
+    <p class="slide-body">Every cloud agent session automatically runs:</p>
+    <ul class="slide-list"><li>✅ <strong>CodeQL</strong> — Identifies security vulnerabilities in generated code</li><li>✅ <strong>Secret Scanning</strong> — Detects API keys, tokens, and passwords</li><li>✅ <strong>Dependency Checking</strong> — Checks new deps against GitHub Advisory Database</li><li>✅ <strong>Copilot Code Review</strong> — Self-reviews its own changes</li></ul>
+    <p class="slide-body">No additional license required. Can be disabled by repo admins.</p>
+  </div>
+  <aside class="speaker-notes" hidden>This is a major advantage of the cloud agent over local agents. Security scanning is built in and runs automatically. Before the agent even opens a PR, it checks for hardcoded secrets, vulnerable dependencies, and code security issues. It even reviews its own code with Copilot code review. This doesn&#x27;t replace human review — the PR is still a draft — but it catches many issues before a human ever sees them.</aside>
+</article>

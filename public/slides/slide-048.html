@@ -1,0 +1,36 @@
+<article class="slide" data-number="48" data-type="diagram" data-section="Skills">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Progressive Disclosure</h1>
+    
+    <p class="slide-body">Skills use a smart three-tier loading strategy:</p>
+    <div class="tier-stack">
+      <div class="tier-item">
+        <div class="tier-number">1</div>
+        <div class="tier-content">
+          <div class="tier-title">CATALOG</div>
+          <div class="tier-desc">Name + Description loaded at session start for ALL available skills</div>
+        </div>
+        <div class="tier-tokens">~50-100 tokens/skill</div>
+      </div>
+      <div class="tier-item">
+        <div class="tier-number">2</div>
+        <div class="tier-content">
+          <div class="tier-title">INSTRUCTIONS</div>
+          <div class="tier-desc">Full SKILL.md body loaded ONLY when the skill is activated (matched to task)</div>
+        </div>
+        <div class="tier-tokens">&lt;5000 tokens</div>
+      </div>
+      <div class="tier-item">
+        <div class="tier-number">3</div>
+        <div class="tier-content">
+          <div class="tier-title">RESOURCES</div>
+          <div class="tier-desc">Scripts, references, assets loaded ONLY when instructions reference them</div>
+        </div>
+        <div class="tier-tokens">varies</div>
+      </div>
+    </div>
+    <p class="slide-body"><strong>20 installed skills ≠ 20× the context cost!</strong></p>
+  </div>
+  <aside class="speaker-notes" hidden>This is the key design insight. If you have 20 skills installed, the agent doesn&#x27;t pay the token cost of loading all 20 into context. At startup, it only loads the names and descriptions — maybe 50-100 tokens per skill. When it encounters a task that matches a skill&#x27;s description, it loads the full instructions. And any referenced scripts or files are only loaded when the instructions explicitly refer to them. This keeps the context window efficient.</aside>
+</article>

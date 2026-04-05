@@ -1,0 +1,30 @@
+<article class="slide" data-number="59" data-type="code-example" data-section="Hooks">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Hook Configuration Format</h1>
+    
+    <p class="slide-body"><code>.github/hooks/security-hooks.json</code>:</p>
+    <pre class="code-block"><code>{
+  <span class="prop"><span class="str">&quot;version&quot;</span></span>: <span class="num">1</span>,
+  <span class="prop"><span class="str">&quot;hooks&quot;</span></span>: {
+    <span class="prop"><span class="str">&quot;preToolUse&quot;</span></span>: [
+      {
+        <span class="prop"><span class="str">&quot;type&quot;</span></span>: <span class="str">&quot;command&quot;</span>,
+        <span class="prop"><span class="str">&quot;bash&quot;</span></span>: <span class="str">&quot;./scripts/security-check.sh&quot;</span>,
+        <span class="prop"><span class="str">&quot;powershell&quot;</span></span>: <span class="str">&quot;./scripts/security-check.ps1&quot;</span>,
+        <span class="prop"><span class="str">&quot;cwd&quot;</span></span>: <span class="str">&quot;.github/hooks&quot;</span>,
+        <span class="prop"><span class="str">&quot;timeoutSec&quot;</span></span>: <span class="num">15</span>
+      }
+    ],
+    <span class="prop"><span class="str">&quot;sessionStart&quot;</span></span>: [
+      {
+        <span class="prop"><span class="str">&quot;type&quot;</span></span>: <span class="str">&quot;command&quot;</span>,
+        <span class="prop"><span class="str">&quot;bash&quot;</span></span>: <span class="str">&quot;echo &#x27;Policy hooks active&#x27;&quot;</span>,
+        <span class="prop"><span class="str">&quot;timeoutSec&quot;</span></span>: <span class="num">5</span>
+      }
+    ]
+  }
+}</code></pre>
+  </div>
+  <aside class="speaker-notes" hidden>Hooks are configured as JSON files in `.github/hooks/`. Each hook type gets an array of commands that run in order. You specify separate bash and PowerShell commands for cross-platform support. The `cwd` field sets the working directory, and `timeoutSec` prevents hooks from hanging — default is 30 seconds. You can have multiple JSON files — they&#x27;re all loaded. For the cloud agent, these files must be on the default branch.</aside>
+</article>

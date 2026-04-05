@@ -1,0 +1,14 @@
+<article class="slide" data-number="25" data-type="list" data-section="Agent Types">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">CLI Tool Approval System</h1>
+    
+    <p class="slide-body">When the agent wants to run a command, you get three options:</p>
+    <ol class="slide-list"><li><strong>Yes</strong> — Allow this specific command, this time only</li><li><strong>Yes, and approve for the session</strong> — Allow all uses of this tool</li><li><strong>No (Esc)</strong> — Cancel and give different instructions</li></ol>
+    <p class="slide-body"><strong>Command-line flags:</strong></p>
+    <pre class="code-block"><code>--allow-all-tools                  <span class="cmt"># No prompts at all</span>
+--allow-tool=&<span class="cmt">#x27;shell(git)&#x27;          # Allow specific tool</span>
+--deny-tool=&<span class="cmt">#x27;shell(rm)&#x27;            # Block specific tool</span></code></pre>
+  </div>
+  <aside class="speaker-notes" hidden>The CLI has a granular approval system. You can approve individual commands, approve a tool for the whole session, or block it entirely. The command-line flags let you pre-configure permissions — for example, allow git commands but block `rm`. You can even combine: allow all tools except `rm -rf`. This gives you fine-grained control over what the agent can do.</aside>
+</article>

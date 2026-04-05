@@ -1,0 +1,15 @@
+<article class="slide" data-number="58" data-type="single-point" data-section="Hooks">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">The preToolUse Hook — Most Powerful</h1>
+    
+    <p class="slide-body">The <strong>only</strong> hook that can directly control agent behavior.</p>
+    <p class="slide-body">It can return:</p>
+    <ul class="slide-list"><li><code>"deny"</code> → Tool is <strong>blocked</strong>, agent gets the reason ✅ Works everywhere</li><li><code>"allow"</code> → Tool proceeds ⚠️ <em>Cloud/CLI: not currently processed</em></li><li><code>"ask"</code> → User prompted for confirmation ⚠️ <em>Cloud/CLI: not currently processed</em></li></ul>
+    <pre class="code-block"><code>{
+  <span class="prop"><span class="str">&quot;permissionDecision&quot;</span></span>: <span class="str">&quot;deny&quot;</span>,
+  <span class="prop"><span class="str">&quot;permissionDecisionReason&quot;</span></span>: <span class="str">&quot;Privilege escalation not allowed.&quot;</span>
+}</code></pre>
+  </div>
+  <aside class="speaker-notes" hidden>The preToolUse hook is the star of the show. When the agent wants to run a bash command, edit a file, or call any tool, the preToolUse hook fires first. Your script receives the tool name and arguments as JSON on stdin. You check the arguments against your policies and return a decision. Important caveat: on the cloud agent and CLI, only &quot;deny&quot; actually works right now. If you return &quot;allow&quot; or &quot;ask&quot;, the tool proceeds as if no hook ran. So in practice, your hooks should focus on blocking dangerous actions — don&#x27;t rely on &quot;allow&quot; or &quot;ask&quot; for enforcement on those surfaces. VS Code may handle these values more fully, but check the latest docs.</aside>
+</article>

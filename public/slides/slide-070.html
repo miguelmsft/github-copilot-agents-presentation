@@ -1,0 +1,27 @@
+<article class="slide" data-number="70" data-type="single-point" data-section="Customization">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Agent Handoffs — Multi-Step Workflows</h1>
+    
+    <p class="slide-body">Custom agents can <strong>hand off</strong> to each other, creating guided workflows:</p>
+    <div class="handoff-flow">
+      <div class="handoff-step">
+        <div class="handoff-step-title">📋 PLANNER</div>
+        <div class="handoff-step-desc">Read-only</div>
+      </div>
+      <div class="handoff-arrow">→<br><span class="handoff-arrow-label">handoff</span></div>
+      <div class="handoff-step">
+        <div class="handoff-step-title">⚙️ IMPLEMENTER</div>
+        <div class="handoff-step-desc">Full tools</div>
+      </div>
+      <div class="handoff-arrow">→<br><span class="handoff-arrow-label">handoff</span></div>
+      <div class="handoff-step">
+        <div class="handoff-step-title">🔍 REVIEWER</div>
+        <div class="handoff-step-desc">Read-only</div>
+      </div>
+    </div>
+    <p class="slide-body">Each agent has its own instructions, tools, and model preference.</p>
+    <p class="slide-body">After a response completes, <strong>handoff buttons</strong> appear for the next step.</p>
+  </div>
+  <aside class="speaker-notes" hidden>Handoffs let you chain agents together. A planner agent creates the implementation plan using read-only tools. When done, a &quot;Start Implementation&quot; button appears. Clicking it transitions to an implementer agent with full tool access. After implementation, a &quot;Review&quot; button transitions to a reviewer agent. Each agent has its own persona, tools, and model. This is a powerful pattern for structured workflows — plan, implement, review.</aside>
+</article>

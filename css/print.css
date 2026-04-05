@@ -1,0 +1,70 @@
+/* ============================================================
+   PRINT.CSS — PDF export styles (Chrome → Save as PDF)
+   ============================================================ */
+
+@media print {
+  @page {
+    size: 10in 5.625in landscape;
+    margin: 0;
+  }
+
+  html, body {
+    width: 10in;
+    height: 5.625in;
+    overflow: visible !important;
+    background: var(--bg-primary) !important;
+  }
+
+  #presentation, #slide-scaler, #slide-container {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  .slide {
+    position: relative !important;
+    width: 10in !important;
+    height: 5.625in !important;
+    page-break-after: always;
+    break-after: page;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .slide:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  .slide.print-hidden { display: none !important; }
+
+  /* Hide UI chrome */
+  #admin-toggle, #admin-panel, #admin-overlay,
+  #slide-counter, #section-label, #progress-bar,
+  .speaker-notes-overlay, .speaker-notes,
+  .slide-bg { display: none !important; }
+
+  /* Prevent content overflow */
+  .code-block, .slide-table, .diagram-block,
+  .flow-container, .tool-grid, .tree-container,
+  .ecosystem-container, .tier-stack {
+    overflow: hidden !important;
+    max-height: 4.5in !important;
+  }
+
+  /* Disable hover effects and animations */
+  .card:hover, .tool-card:hover, .flow-step:hover {
+    transform: none !important;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

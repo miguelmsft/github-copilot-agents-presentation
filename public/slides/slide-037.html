@@ -1,0 +1,9 @@
+<article class="slide" data-number="37" data-type="comparison" data-section="MCP">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Two Transport Modes</h1>
+    
+    <table class="slide-table"><thead><tr><th></th><th>stdio (Local)</th><th>Streamable HTTP (Remote)</th></tr></thead><tbody><tr><td><strong>In plain terms</strong></td><td>Server runs as a program on your computer</td><td>Server runs on the internet</td></tr><tr><td><strong>How they talk</strong></td><td>Text piped in/out (like typing into a program)</td><td>Web requests (like a browser calling an API)</td></tr><tr><td><strong>Best for</strong></td><td>Local tools on your machine</td><td>Cloud APIs and shared services</td></tr><tr><td><strong>Security</strong></td><td>Inherits your local permissions</td><td>Supports OAuth 2.1 login</td></tr><tr><td><strong>Setup</strong></td><td>Simple — just a command</td><td>Requires URL + possibly auth</td></tr></tbody></table>
+  </div>
+  <aside class="speaker-notes" hidden>Two ways MCP servers connect. Stdio — which stands for &quot;standard input/output&quot; — means the server runs as a local program on your machine. The host sends messages in, the server sends responses out — like typing commands into a program. Most MCP servers you&#x27;ll encounter use this mode because it&#x27;s simple and secure. The other mode, Streamable HTTP, is for remote servers hosted on the internet. Think of it like calling a web API. Remote servers support OAuth login for authentication. For beginners, you&#x27;ll mostly work with stdio servers.</aside>
+</article>

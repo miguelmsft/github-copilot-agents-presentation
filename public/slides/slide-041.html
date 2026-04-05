@@ -1,0 +1,22 @@
+<article class="slide" data-number="41" data-type="code-example" data-section="MCP">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Configuring MCP in VS Code</h1>
+    
+    <p class="slide-body">Create <code>.vscode/mcp.json</code>:</p>
+    <pre class="code-block"><code>{
+  <span class="prop"><span class="str">&quot;servers&quot;</span></span>: {
+    <span class="prop"><span class="str">&quot;github&quot;</span></span>: {
+      <span class="prop"><span class="str">&quot;type&quot;</span></span>: <span class="str">&quot;http&quot;</span>,
+      <span class="prop"><span class="str">&quot;url&quot;</span></span>: <span class="str">&quot;https://api.githubcopilot.com/mcp&quot;</span>
+    },
+    <span class="prop"><span class="str">&quot;playwright&quot;</span></span>: {
+      <span class="prop"><span class="str">&quot;command&quot;</span></span>: <span class="str">&quot;npx&quot;</span>,
+      <span class="prop"><span class="str">&quot;args&quot;</span></span>: [<span class="str">&quot;-y&quot;</span>, <span class="str">&quot;@microsoft/mcp-server-playwright&quot;</span>]
+    }
+  }
+}</code></pre>
+    <p class="slide-body"><strong>Other ways to add servers:</strong> MCP Server Gallery, Command Palette, <code>code --add-mcp</code>, auto-discovery from other apps.</p>
+  </div>
+  <aside class="speaker-notes" hidden>Here&#x27;s a simple VS Code config with two servers — the GitHub remote server and a local Playwright server for browser automation. The GitHub server uses HTTP, while Playwright runs as a local subprocess via npx. VS Code also has an MCP Server Gallery where you can browse and install servers with one click, similar to the extension marketplace. You can also use input variables for secrets — never hardcode API keys.</aside>
+</article>

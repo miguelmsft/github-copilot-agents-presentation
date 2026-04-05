@@ -1,0 +1,23 @@
+<article class="slide" data-number="42" data-type="code-example" data-section="MCP">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Configuring MCP in Copilot CLI</h1>
+    
+    <p class="slide-body">Edit <code>~/.copilot/mcp-config.json</code>:</p>
+    <pre class="code-block"><code>{
+  <span class="prop"><span class="str">&quot;mcpServers&quot;</span></span>: {
+    <span class="prop"><span class="str">&quot;playwright&quot;</span></span>: {
+      <span class="prop"><span class="str">&quot;type&quot;</span></span>: <span class="str">&quot;local&quot;</span>,
+      <span class="prop"><span class="str">&quot;command&quot;</span></span>: <span class="str">&quot;npx&quot;</span>,
+      <span class="prop"><span class="str">&quot;args&quot;</span></span>: [<span class="str">&quot;@playwright/mcp@latest&quot;</span>],
+      <span class="prop"><span class="str">&quot;tools&quot;</span></span>: [<span class="str">&quot;*&quot;</span>]
+    }
+  }
+}</code></pre>
+    <p class="slide-body"><strong>Or use the interactive command:</strong></p>
+    <pre class="code-block"><code>/mcp add       → Fill in form → Ctrl+S to save
+/mcp show      → See all configured servers
+/mcp edit      → Edit a server config</code></pre>
+  </div>
+  <aside class="speaker-notes" hidden>The CLI format is slightly different — the root key is `mcpServers` instead of `servers`, and there&#x27;s a `tools` field for filtering which tools are available. The interactive `/mcp add` command makes it easy — you get a form to fill in and save with Ctrl+S. The server is available immediately, no restart needed. Remember, the GitHub MCP server is already built in to the CLI.</aside>
+</article>

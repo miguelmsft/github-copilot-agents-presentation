@@ -1,0 +1,24 @@
+<article class="slide" data-number="49" data-type="code-example" data-section="Skills">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">The SKILL.md Format</h1>
+    
+    <pre class="code-block"><code><span class="cmt">---</span>
+<span class="prop">name</span>: <span class="str">github-actions-failure-debugging</span>
+<span class="prop">description</span>: <span class="str">&gt;</span>
+  <span class="str">Guide for debugging failing GitHub Actions workflows.</span>
+  <span class="str">Use this when asked to debug failing GitHub Actions.</span>
+<span class="cmt">---</span>
+
+<span class="cmt"># GitHub Actions Failure Debugging</span>
+
+To debug failing workflows in a pull request:
+
+<span class="num">1.</span> Use <span class="fn">`list_workflow_runs`</span> to look up recent runs
+<span class="num">2.</span> Use <span class="fn">`summarize_job_log_failures`</span> to get an AI summary
+<span class="num">3.</span> If needed, use <span class="fn">`get_job_logs`</span> for full detailed logs
+<span class="num">4.</span> Try to reproduce the failure locally
+<span class="num">5.</span> Fix the failing build and verify before committing</code></pre>
+  </div>
+  <aside class="speaker-notes" hidden>Here's a real skill from the official documentation. The frontmatter has two required fields: name and description. The description is critical — it's what Copilot uses to decide whether to activate this skill. Make it specific: "Use this when asked to debug failing GitHub Actions workflows." The body contains step-by-step instructions the agent follows when the skill is activated.</aside>
+</article>

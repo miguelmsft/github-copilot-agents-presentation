@@ -1,0 +1,23 @@
+<article class="slide" data-number="39" data-type="code-example" data-section="MCP">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Tools — The Most Important Primitive</h1>
+    
+    <p class="slide-body">Each tool has a <strong>name</strong>, a <strong>description</strong>, and a <strong>schema</strong> (a blueprint describing what inputs it needs):</p>
+    <pre class="code-block"><code>{
+  <span class="prop"><span class="str">&quot;name&quot;</span></span>: <span class="str">&quot;searchFlights&quot;</span>,
+  <span class="prop"><span class="str">&quot;description&quot;</span></span>: <span class="str">&quot;Search for available flights&quot;</span>,
+  <span class="prop"><span class="str">&quot;inputSchema&quot;</span></span>: {
+    <span class="prop"><span class="str">&quot;type&quot;</span></span>: <span class="str">&quot;object&quot;</span>,
+    <span class="prop"><span class="str">&quot;properties&quot;</span></span>: {
+      <span class="prop"><span class="str">&quot;origin&quot;</span></span>: { <span class="prop"><span class="str">&quot;type&quot;</span></span>: <span class="str">&quot;string&quot;</span> },
+      <span class="prop"><span class="str">&quot;destination&quot;</span></span>: { <span class="prop"><span class="str">&quot;type&quot;</span></span>: <span class="str">&quot;string&quot;</span> },
+      <span class="prop"><span class="str">&quot;date&quot;</span></span>: { <span class="prop"><span class="str">&quot;type&quot;</span></span>: <span class="str">&quot;string&quot;</span>, <span class="prop"><span class="str">&quot;format&quot;</span></span>: <span class="str">&quot;date&quot;</span> }
+    },
+    <span class="prop"><span class="str">&quot;required&quot;</span></span>: [<span class="str">&quot;origin&quot;</span>, <span class="str">&quot;destination&quot;</span>, <span class="str">&quot;date&quot;</span>]
+  }
+}</code></pre>
+    <p class="slide-body">The agent reads the description, decides when to call it, and fills in the inputs.</p>
+  </div>
+  <aside class="speaker-notes" hidden>Here&#x27;s what a tool definition looks like. The name identifies it. The description tells the AI when to use it — think of it as a label. The input schema is a blueprint — it says &quot;this tool needs an origin, a destination, and a date, all as text strings.&quot; JSON Schema is just a standard way to describe what data looks like — if you&#x27;ve ever filled out a form with required fields, you already understand the concept. When the agent encounters a task that matches this description, it calls the tool with the right arguments.</aside>
+</article>

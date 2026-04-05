@@ -1,0 +1,24 @@
+<article class="slide" data-number="51" data-type="code-example" data-section="Skills">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Skills with Scripts</h1>
+    
+    <p class="slide-body">Skills can bundle executable scripts:</p>
+    <div class="file-tree">
+      <span class="ft-dir">.github/skills/image-convert/</span><br>
+      ├── <span class="ft-file">SKILL.md</span><br>
+      └── <span class="ft-file">convert-svg-to-png.sh</span>
+    </div>
+    <pre class="code-block"><code><span class="cmt">---</span>
+<span class="prop">name</span>: <span class="str">image-convert</span>
+<span class="prop">description</span>: <span class="str">Converts SVG images to PNG format.</span>
+<span class="prop">allowed-tools</span>: <span class="str">shell</span>
+<span class="cmt">---</span>
+
+Run the <span class="fn">`convert-svg-to-png.sh`</span> script from this
+skill's base directory, passing the SVG file path
+as the first argument.</code></pre>
+    <p class="slide-body">⚠️ Only use <code>allowed-tools: shell</code> for <strong>trusted</strong> skills!</p>
+  </div>
+  <aside class="speaker-notes" hidden>Skills aren't limited to text instructions — they can include scripts that the agent runs. This image conversion skill bundles a shell script and tells the agent to run it. The allowed-tools: shell field pre-approves terminal execution, so the agent won't ask for confirmation. This is powerful but dangerous — only use it for skills you've thoroughly reviewed.</aside>
+</article>

@@ -1,0 +1,71 @@
+/* ============================================================
+   THEME: Corporate — White, blue accents, Inter
+   ============================================================ */
+
+[data-theme="corporate"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f7fa;
+  --bg-card: rgba(0,0,0,0.02);
+  --border-card: rgba(0,0,0,0.08);
+  --text-primary: #1a1a2e;
+  --text-secondary: rgba(26,26,46,0.6);
+  --accent-primary: #0066cc;
+  --accent-secondary: #003d7a;
+  --gradient-title: linear-gradient(135deg, #0066cc, #003d7a);
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+[data-theme="corporate"] .code-block {
+  background: #f5f7fa;
+  border-color: rgba(0,0,0,0.1);
+  color: #1a1a2e;
+}
+
+[data-theme="corporate"] .code-block .kw  { color: #d73a49; }
+[data-theme="corporate"] .code-block .str { color: #032f62; }
+[data-theme="corporate"] .code-block .cmt { color: #6a737d; }
+[data-theme="corporate"] .code-block .fn  { color: #6f42c1; }
+[data-theme="corporate"] .code-block .num { color: #005cc5; }
+[data-theme="corporate"] .code-block .prop { color: #005cc5; }
+[data-theme="corporate"] .code-block .tag { color: #22863a; }
+[data-theme="corporate"] .code-block .op  { color: #d73a49; }
+
+[data-theme="corporate"] .slide-table thead th {
+  background: rgba(0,102,204,0.06);
+}
+
+[data-theme="corporate"] .slide[data-type="title-slide"] .slide-bg::before {
+  background: radial-gradient(circle, rgba(0,102,204,0.05) 0%, transparent 70%);
+}
+
+[data-theme="corporate"] .slide[data-type="title-slide"] .slide-bg::after {
+  background: radial-gradient(circle, rgba(0,61,122,0.04) 0%, transparent 70%);
+}
+
+[data-theme="corporate"] .card {
+  background: #f9fafb;
+  border-color: rgba(0,0,0,0.08);
+  backdrop-filter: none;
+}
+
+[data-theme="corporate"] .diagram-block {
+  background: #f5f7fa;
+  color: #0066cc;
+}
+
+[data-theme="corporate"] .slide-quote {
+  background: #f5f7fa;
+  border-color: #0066cc;
+}
+
+[data-theme="corporate"] .speaker-notes-overlay {
+  background: rgba(255,255,255,0.95);
+  border-top-color: rgba(0,0,0,0.1);
+  color: #1a1a2e;
+}
+
+[data-theme="corporate"] #progress-bar {
+  background: linear-gradient(135deg, #0066cc, #003d7a);
+}

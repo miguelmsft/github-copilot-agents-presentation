@@ -1,0 +1,23 @@
+<article class="slide" data-number="66" data-type="code-example" data-section="Customization">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Custom Instructions</h1>
+    
+    <p class="slide-body"><code>.github/copilot-instructions.md</code> — applies to <strong>every</strong> interaction:</p>
+    <pre class="code-block"><code># Project Overview
+This is a React/Node.js web app using MongoDB.
+
+## Coding Standards
+- Use TypeScript with strict mode
+- Use functional components with hooks
+- Follow PEP 8 for Python scripts
+- Write JSDoc comments for public functions
+
+## Architecture
+- /src — Frontend React code
+- /server — Node.js backend
+- /docs — API documentation</code></pre>
+    <p class="slide-body">Also: <strong>path-specific</strong> instructions (<code>.github/instructions/*.instructions.md</code>) with glob patterns.</p>
+  </div>
+  <aside class="speaker-notes" hidden>Custom instructions are the simplest customization — a Markdown file that gives Copilot context about your project. It&#x27;s included in every interaction, so it should contain broadly applicable information: your tech stack, coding standards, architecture overview. Path-specific instructions let you have different rules for different file types — TypeScript conventions for `.ts` files, Python conventions for `.py` files. These use glob patterns in the frontmatter.</aside>
+</article>

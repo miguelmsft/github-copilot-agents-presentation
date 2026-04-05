@@ -1,0 +1,25 @@
+<article class="slide" data-number="10" data-type="diagram" data-section="Foundations">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">The Agentic Loop — Diagram</h1>
+    
+    <div class="flow-container">
+      <div class="flow-step"><div class="flow-step-title">📝 YOUR PROMPT</div></div>
+      <div class="flow-connector"></div>
+      <div class="flow-step"><div class="flow-step-title">1. UNDERSTAND</div><div class="flow-step-desc">Read files • Search codebase • Look up docs</div></div>
+      <div class="flow-connector"></div>
+      <div class="flow-step"><div class="flow-step-title">2. ACT</div><div class="flow-step-desc">Edit code • Run commands • Call MCP servers</div></div>
+      <div class="flow-connector"></div>
+      <div class="flow-step" style="position:relative;"><div class="flow-step-title">3. VALIDATE</div><div class="flow-step-desc">Run tests • Check for errors</div>
+        <svg class="loopback-svg" style="position:absolute; right:-120px; top:-225px; width:130px; height:282px; overflow:visible;" viewBox="0 0 130 282" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 278 L90 278 Q105 278, 105 263 L105 19 Q105 4, 90 4 L18 4" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 3" opacity="0.7"/>
+          <polygon points="20 0, 10 4, 20 8" fill="currentColor" opacity="0.7"/>
+          <text class="loopback-label" x="115" y="168" fill="currentColor" font-size="12" text-anchor="middle" font-style="italic" transform="rotate(-90 115 168)">Not done / Errors</text>
+        </svg>
+      </div>
+      <div class="flow-connector"></div>
+      <div class="flow-step flow-highlight"><div class="flow-step-title">✅ COMPLETE</div></div>
+    </div>
+  </div>
+  <aside class="speaker-notes" hidden>Here&#x27;s the loop visualized. Your prompt kicks it off. The agent reads files to understand what needs to change, then acts by editing code or running commands, then validates by checking for errors or running tests. If it finds problems, it loops back and tries again. This cycle can repeat many times — the agent is persistent. It doesn&#x27;t give up after one try.</aside>
+</article>

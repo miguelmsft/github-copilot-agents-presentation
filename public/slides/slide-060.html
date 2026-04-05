@@ -1,0 +1,29 @@
+<article class="slide" data-number="60" data-type="code-example" data-section="Hooks">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Example: Security Policy Enforcement</h1>
+    
+    <p class="slide-body"><code>.github/hooks/scripts/security-check.sh</code>:</p>
+    <pre class="code-block"><code><span class="cmt">#!/bin/bash</span>
+<span class="kw">set</span> -euo pipefail
+
+INPUT=&quot;$(cat)&quot;
+TOOL_NAME=&quot;$(<span class="kw">echo</span> &quot;$INPUT&quot; | jq -r &<span class="cmt">#x27;.toolName&#x27;)&quot;</span>
+TOOL_ARGS=&quot;$(<span class="kw">echo</span> &quot;$INPUT&quot; | jq -r &<span class="cmt">#x27;.toolArgs&#x27;)&quot;</span>
+
+<span class="cmt"># Only check bash commands</span>
+<span class="kw">if</span> [ &quot;$TOOL_NAME&quot; != &quot;bash&quot; ]; <span class="kw">then</span> <span class="kw">exit</span> 0; <span class="kw">fi</span>
+
+COMMAND=&quot;$(<span class="kw">echo</span> &quot;$TOOL_ARGS&quot; | jq -r &<span class="cmt">#x27;.command&#x27;)&quot;</span>
+
+<span class="cmt"># Block privilege escalation</span>
+<span class="kw">if</span> <span class="kw">echo</span> &quot;$COMMAND&quot; | grep -qE &<span class="cmt">#x27;\b(sudo|su)\b&#x27;; <span class="kw">then</span></span>
+  jq -n &<span class="cmt">#x27;{</span>
+    permissionDecision: &quot;deny&quot;,
+    permissionDecisionReason: &quot;Privilege escalation blocked.&quot;
+  }&<span class="cmt">#x27;</span>
+  <span class="kw">exit</span> 0
+<span class="kw">fi</span></code></pre>
+  </div>
+  <aside class="speaker-notes" hidden>Here&#x27;s a real security hook. It reads JSON from stdin, extracts the tool name and arguments, and checks if the agent is trying to run a dangerous command. If it detects `sudo` or `su`, it returns a deny decision with a reason. The agent sees this reason and adjusts — maybe it asks you to run the command manually. You can block anything: `rm -rf`, `curl | bash`, database drops, whatever your security policy requires. Quick terminology note: the field names like `toolName` and `toolArgs` use a naming convention called &quot;camelCase&quot; — words are joined together and each word after the first starts with a capital letter. This is common in JavaScript and JSON.</aside>
+</article>

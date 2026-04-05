@@ -1,0 +1,26 @@
+<article class="slide" data-number="73" data-type="code-example" data-section="Customization">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Combining Mechanisms — Example Setup</h1>
+    
+    <div class="file-tree">
+      <span class="ft-dir">.github/</span><br>
+      ├── <span class="ft-file">copilot-instructions.md</span> <span class="ft-comment">← Always-on standards</span><br>
+      ├── <span class="ft-dir">instructions/</span><br>
+      │   ├── <span class="ft-file">react.instructions.md</span> <span class="ft-comment">← React-specific rules</span><br>
+      │   └── <span class="ft-file">python.instructions.md</span> <span class="ft-comment">← Python-specific rules</span><br>
+      ├── <span class="ft-dir">prompts/</span><br>
+      │   ├── <span class="ft-file">create-component.prompt.md</span> <span class="ft-comment">← Reusable task templates</span><br>
+      │   └── <span class="ft-file">security-review.prompt.md</span><br>
+      ├── <span class="ft-dir">skills/</span><br>
+      │   └── <span class="ft-dir">debug-ci/</span> <span class="ft-comment">← Multi-step workflow</span><br>
+      │       └── <span class="ft-file">SKILL.md</span><br>
+      ├── <span class="ft-dir">agents/</span><br>
+      │   ├── <span class="ft-file">test-specialist.agent.md</span> <span class="ft-comment">← Specialized personas</span><br>
+      │   └── <span class="ft-file">planner.agent.md</span><br>
+      └── <span class="ft-dir">hooks/</span><br>
+          └── <span class="ft-file">security-hooks.json</span> <span class="ft-comment">← Lifecycle enforcement</span>
+    </div>
+  </div>
+  <aside class="speaker-notes" hidden>Here&#x27;s what a mature repo customization setup looks like. Custom instructions at the top for coding standards. Path-specific instructions for language-specific rules. Prompt files for reusable task templates. Skills for complex workflows. Custom agents for specialized roles. And hooks for security enforcement. All version-controlled, all sharable with your team. Start simple — just the instructions file — and add more as you need them.</aside>
+</article>

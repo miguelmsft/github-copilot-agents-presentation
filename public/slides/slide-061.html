@@ -1,0 +1,27 @@
+<article class="slide" data-number="61" data-type="code-example" data-section="Hooks">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Example: Audit Logging</h1>
+    
+    <p class="slide-body">Log every tool use for compliance:</p>
+    <pre class="code-block"><code>{
+  <span class="prop"><span class="str">&quot;version&quot;</span></span>: <span class="num">1</span>,
+  <span class="prop"><span class="str">&quot;hooks&quot;</span></span>: {
+    <span class="prop"><span class="str">&quot;sessionStart&quot;</span></span>: [
+      { <span class="prop"><span class="str">&quot;type&quot;</span></span>: <span class="str">&quot;command&quot;</span>, <span class="prop"><span class="str">&quot;bash&quot;</span></span>: <span class="str">&quot;./audit/log-session.sh&quot;</span> }
+    ],
+    <span class="prop"><span class="str">&quot;userPromptSubmitted&quot;</span></span>: [
+      { <span class="prop"><span class="str">&quot;type&quot;</span></span>: <span class="str">&quot;command&quot;</span>, <span class="prop"><span class="str">&quot;bash&quot;</span></span>: <span class="str">&quot;./audit/log-prompt.sh&quot;</span> }
+    ],
+    <span class="prop"><span class="str">&quot;preToolUse&quot;</span></span>: [
+      { <span class="prop"><span class="str">&quot;type&quot;</span></span>: <span class="str">&quot;command&quot;</span>, <span class="prop"><span class="str">&quot;bash&quot;</span></span>: <span class="str">&quot;./audit/log-tool.sh&quot;</span> }
+    ],
+    <span class="prop"><span class="str">&quot;sessionEnd&quot;</span></span>: [
+      { <span class="prop"><span class="str">&quot;type&quot;</span></span>: <span class="str">&quot;command&quot;</span>, <span class="prop"><span class="str">&quot;bash&quot;</span></span>: <span class="str">&quot;./audit/log-end.sh&quot;</span> }
+    ]
+  }
+}</code></pre>
+    <p class="slide-body">Creates a complete audit trail of every agent interaction.</p>
+  </div>
+  <aside class="speaker-notes" hidden>For compliance-regulated environments, hooks let you create complete audit trails. This config logs every session start, every prompt, every tool use, and every session end. Your scripts can write to log files, send to a SIEM system, or push to a monitoring service. GitHub recommends redacting sensitive data — the tutorial shows regex patterns for removing tokens and API keys from logs.</aside>
+</article>

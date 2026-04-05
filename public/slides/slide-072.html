@@ -1,0 +1,37 @@
+<article class="slide" data-number="72" data-type="decision-tree" data-section="Customization">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Decision Tree: Which Mechanism to Use</h1>
+    
+    <div class="tree-container">
+      <div class="tree-question">What do you want to customize?</div>
+      <div class="category-list">
+        <div class="category-item">
+          <div class="category-label">Standards</div>
+          <div class="category-value">Consistent coding standards for ALL interactions → <strong>Custom Instructions</strong> <code>.copilot-instructions.md</code></div>
+        </div>
+        <div class="category-item">
+          <div class="category-label">Templates</div>
+          <div class="category-value">A reusable template for a specific task → <strong>Prompt Files</strong> <code>.prompt.md</code></div>
+        </div>
+        <div class="category-item">
+          <div class="category-label">Workflows</div>
+          <div class="category-value">A complex, multi-step workflow with scripts → <strong>Agent Skills</strong> <code>SKILL.md</code></div>
+        </div>
+        <div class="category-item">
+          <div class="category-label">Personas</div>
+          <div class="category-value">A specialized persona with tool restrictions → <strong>Custom Agents</strong> <code>.agent.md</code></div>
+        </div>
+        <div class="category-item">
+          <div class="category-label">Enforcement</div>
+          <div class="category-value">Deterministic enforcement at lifecycle points → <strong>Hooks</strong> <code>.json</code></div>
+        </div>
+        <div class="category-item">
+          <div class="category-label">External</div>
+          <div class="category-value">External API or database access → <strong>MCP Servers</strong> <code>mcp.json</code></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <aside class="speaker-notes" hidden>When in doubt, use this decision tree. Standards that apply everywhere? Custom instructions. A task you repeat with different inputs? Prompt files. A complex workflow with scripts? Skills. A specialized role? Custom agents. Enforcement guarantees? Hooks. External connectivity? MCP. In practice, you&#x27;ll use several together — they&#x27;re complementary layers, not competing alternatives.</aside>
+</article>

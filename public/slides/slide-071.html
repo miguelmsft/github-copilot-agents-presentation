@@ -1,0 +1,22 @@
+<article class="slide" data-number="71" data-type="single-point" data-section="Customization">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Agentic Workflows (GitHub Actions)</h1>
+    
+    <p class="slide-body">AI-powered automation in GitHub Actions, written in Markdown:</p>
+    <pre class="code-block"><code><span class="cmt">---</span>
+<span class="prop">name</span>: <span class="str">"Daily Issues Report"</span>
+<span class="prop">on</span>:
+  <span class="prop">schedule</span>: <span class="str">daily on weekdays</span>
+<span class="prop">engine</span>: <span class="str">copilot</span>
+<span class="prop">safe-outputs</span>:
+  <span class="prop">create-issue</span>:
+    <span class="prop">title-prefix</span>: <span class="str">"[daily-report] "</span>
+<span class="cmt">---</span>
+
+Create a daily summary of open issues for the team.
+Include new issues, closed issues, and stale issues.</code></pre>
+    <p class="slide-body">Compiles to GitHub Actions YAML. Currently in <strong>technical preview</strong>.</p>
+  </div>
+  <aside class="speaker-notes" hidden>Agentic workflows are a separate but related system that brings AI agents into GitHub Actions. You write a Markdown file with natural language instructions, and it compiles to a GitHub Actions YAML workflow. The agent runs on a schedule or in response to events — like a daily issues report, automated PR review, or issue triage. It has a defense-in-depth security model with read-only tokens, network firewalls, and safe output guardrails. This is currently in technical preview.</aside>
+</article>

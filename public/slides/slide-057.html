@@ -1,0 +1,51 @@
+<article class="slide" data-number="57" data-type="diagram" data-section="Hooks">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Hook Lifecycle</h1>
+    
+    <div class="ecosystem-container">
+      <div class="ecosystem-title">Agent Session Lifecycle</div>
+      <div class="flow-container" style="gap:0;">
+        <div class="flow-step" style="min-width:300px;">
+          <div class="flow-step-title">🚀 sessionStart HOOK</div>
+        </div>
+        <div class="flow-connector"></div>
+        <div class="flow-step" style="min-width:300px;">
+          <div class="flow-step-title">💬 User submits prompt</div>
+          <div class="flow-step-desc">userPromptSubmit HOOK</div>
+        </div>
+        <div class="flow-connector"></div>
+        <div class="flow-step" style="min-width:300px;">
+          <div class="flow-step-title">⚙️ Agent decides to use tool</div>
+        </div>
+        <div class="flow-connector"></div>
+        <div class="flow-step flow-highlight" style="min-width:300px;">
+          <div class="flow-step-title">🛡️ preToolUse HOOK</div>
+          <div class="flow-step-desc">ALLOW / DENY / ASK</div>
+        </div>
+        <div class="warning-badge" style="margin: 8px auto;">⚠️ On Cloud Agent &amp; CLI, only <strong>DENY</strong> is currently processed</div>
+        <div class="flow-connector"></div>
+        <div style="display:flex; gap:24px; align-items:flex-start;">
+          <div class="flow-step flow-step-success">
+            <div class="flow-step-title">✅ ALLOWED</div>
+            <div class="flow-step-desc">Tool executes</div>
+          </div>
+          <div class="flow-step flow-step-danger">
+            <div class="flow-step-title">❌ DENIED</div>
+            <div class="flow-step-desc">Agent told why</div>
+          </div>
+        </div>
+        <div class="flow-connector"></div>
+        <div class="flow-step" style="min-width:300px;">
+          <div class="flow-step-title">📋 postToolUse HOOK</div>
+        </div>
+        <div class="flow-connector"></div>
+        <div class="flow-step" style="min-width:300px;">
+          <div class="flow-step-title">🏁 sessionEnd HOOK</div>
+          <div class="flow-step-desc">Runs when session completes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <aside class="speaker-notes" hidden>Here&#x27;s how hooks fit into the agent lifecycle. Session start and end hooks bookend the session — great for setup and cleanup. The user prompt hook fires when you type a message. The real power is in preToolUse and postToolUse — they fire before and after every tool the agent uses. The preToolUse hook is special because it can actually block the tool from executing. IMPORTANT caveat: on Cloud Agent and CLI, only the DENY decision is currently processed. ALLOW and ASK may work differently or not at all on those surfaces — VS Code has the broadest support for all three.</aside>
+</article>

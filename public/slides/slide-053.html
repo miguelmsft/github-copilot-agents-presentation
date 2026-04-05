@@ -1,0 +1,10 @@
+<article class="slide" data-number="53" data-type="comparison" data-section="Skills">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Skills vs. Custom Instructions</h1>
+    
+    <table class="slide-table"><thead><tr><th></th><th>Custom Instructions</th><th>Agent Skills</th></tr></thead><tbody><tr><td><strong>When loaded</strong></td><td>Always (every interaction)</td><td>Only when relevant</td></tr><tr><td><strong>Best for</strong></td><td>Coding standards, style</td><td>Multi-step workflows</td></tr><tr><td><strong>Includes scripts?</strong></td><td>No</td><td>Yes</td></tr><tr><td><strong>File</strong></td><td><code>copilot-instructions.md</code></td><td><code>SKILL.md</code> in a directory</td></tr><tr><td><strong>Context cost</strong></td><td>Always uses tokens</td><td>Only uses tokens when activated</td></tr><tr><td><strong>Portable?</strong></td><td>GitHub-specific</td><td>Open standard (cross-tool)</td></tr></tbody></table>
+    <p class="slide-body"><strong>Rule of thumb:</strong> If it applies to <em>every</em> task → Custom Instructions. If it applies to <em>specific</em> tasks → Skill.</p>
+  </div>
+  <aside class="speaker-notes" hidden>This is a common point of confusion. Custom instructions and skills both provide guidance to Copilot, but they serve different purposes. Custom instructions are always on — they apply to every interaction, so use them for things like coding standards. Skills are loaded on demand — use them for specific procedures like debugging CI or deploying to staging. If you put everything in custom instructions, you waste context tokens on irrelevant guidance.</aside>
+</article>

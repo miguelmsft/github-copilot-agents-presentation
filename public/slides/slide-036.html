@@ -1,0 +1,11 @@
+<article class="slide" data-number="36" data-type="list" data-section="MCP">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">MCP Hosts, Clients, Servers</h1>
+    
+    <ul class="slide-list"><li><strong>Host</strong> = The AI application you interact with (VS Code, Copilot CLI, Claude)</li><li><strong>Client</strong> = A connector created by the host for each server connection</li><li><strong>Server</strong> = A program that provides tools, resources, and prompts</li></ul>
+    <p class="slide-body"><strong>Two ways servers connect:</strong></p>
+    <ul class="slide-list"><li><strong>stdio</strong> — Server runs as a local subprocess (best for local tools)</li><li><strong>Streamable HTTP</strong> — Server runs remotely over the network (best for cloud APIs)</li></ul>
+  </div>
+  <aside class="speaker-notes" hidden>Important distinction: the host is what you interact with, while clients are internal protocol components — one per server. Servers can run locally on your machine via stdio, or remotely over HTTP. Local servers are simpler to set up and more secure. Remote servers are needed when the service lives in the cloud. Most community MCP servers use stdio.</aside>
+</article>

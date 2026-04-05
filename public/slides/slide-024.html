@@ -1,0 +1,16 @@
+<article class="slide" data-number="24" data-type="code-example" data-section="Agent Types">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Copilot CLI — Programmatic Mode & Key Commands</h1>
+    
+    <p class="slide-body"><strong>Single prompt (for scripting / CI):</strong></p>
+    <pre class="code-block"><code>copilot -p &quot;Fix all failing tests&quot; --allow-all-tools</code></pre>
+    <p class="slide-body"><strong>Key session commands:</strong></p>
+    <pre class="code-block"><code>copilot --continue     <span class="cmt"># Resume last session</span>
+copilot --resume       <span class="cmt"># Pick a session to resume</span>
+/model                 <span class="cmt"># Change AI model</span>
+/compact               <span class="cmt"># Free up context window</span>
+/yolo                  <span class="cmt"># Auto-approve all tools</span></code></pre>
+  </div>
+  <aside class="speaker-notes" hidden>The second way is programmatic mode — pass a prompt directly with `-p`. This is perfect for scripts, CI/CD pipelines, and batch operations. The key commands are worth knowing: `--continue` resumes your last session exactly where you left off. `/compact` frees up context window space in long sessions. And `/yolo` — which toggles auto-approval of all tools — is fun but use with caution. Transition: Now let&#x27;s talk about how tool approvals work.</aside>
+</article>

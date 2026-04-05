@@ -1,0 +1,25 @@
+<article class="slide" data-number="67" data-type="code-example" data-section="Customization">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Prompt Files</h1>
+    
+    <p class="slide-body"><code>.github/prompts/generate-tests.prompt.md</code> — reusable task templates:</p>
+    <pre class="code-block"><code><span class="cmt">---</span>
+<span class="prop">agent</span>: <span class="str">'agent'</span>
+<span class="prop">description</span>: <span class="str">'Generate unit tests for a function'</span>
+<span class="prop">tools</span>: [<span class="str">'search/codebase'</span>]
+<span class="cmt">---</span>
+
+Analyze the selected function and generate focused unit tests.
+
+<span class="cmt">## Strategy</span>
+<span class="num">1.</span> Core functionality tests
+<span class="num">2.</span> Input validation and boundary tests
+<span class="num">3.</span> Error handling tests
+
+Target function: <span class="fn">${input:function_name:Which function?}</span>
+Framework: <span class="fn">${input:framework:jest/pytest/etc}</span></code></pre>
+    <p class="slide-body">Invoke with: <strong>/generate-tests</strong> in chat</p>
+  </div>
+  <aside class="speaker-notes" hidden>Prompt files are like saved templates for common tasks. Unlike custom instructions that apply automatically, prompt files are invoked manually — you type a slash command to use one. They support input variables with the ${input:name:placeholder} syntax, making them reusable with different parameters. This example generates unit tests — you invoke it, provide the function name and testing framework, and the agent follows the template.</aside>
+</article>

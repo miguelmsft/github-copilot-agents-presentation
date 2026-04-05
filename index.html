@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="github-cosmos">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Copilot Agents — Presentation</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/themes/github-cosmos.css" />
+  <link rel="stylesheet" href="/css/themes/warm.css" />
+  <link rel="stylesheet" href="/css/themes/corporate.css" />
+  <link rel="stylesheet" href="/css/themes/cyberpunk.css" />
+  <link rel="stylesheet" href="/css/slides.css" />
+  <link rel="stylesheet" href="/css/admin.css" />
+  <link rel="stylesheet" href="/css/print.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+</head>
+<body>
+  <!-- Progress bar -->
+  <div id="progress-bar" style="width: 0%"></div>
+
+  <!-- Presentation viewport -->
+  <div id="presentation">
+    <div id="slide-scaler">
+      <div id="slide-container"></div>
+    </div>
+  </div>
+
+  <!-- Slide counter -->
+  <div id="slide-counter">1 / 81</div>
+
+  <!-- Section label -->
+  <div id="section-label"></div>
+
+  <!-- Speaker notes overlay -->
+  <div id="speaker-notes-overlay" class="speaker-notes-overlay"></div>
+
+  <!-- Admin toggle -->
+  <button id="admin-toggle" title="Settings (Esc to close)">⚙</button>
+
+  <!-- Admin overlay backdrop -->
+  <div id="admin-overlay"></div>
+
+  <!-- Admin panel -->
+  <div id="admin-panel">
+    <div class="admin-section">
+      <div class="admin-section-title">Theme</div>
+      <select id="theme-select" class="admin-select">
+        <option value="github-cosmos">🌌 GitHub Cosmos</option>
+        <option value="warm">☀️ Warm</option>
+        <option value="corporate">🏢 Corporate</option>
+        <option value="cyberpunk">⚡ Cyberpunk</option>
+      </select>
+    </div>
+
+    <div class="admin-section">
+      <div class="admin-section-title">Options</div>
+      <div class="admin-toggle-row">
+        <span class="admin-toggle-label">Speaker Notes</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="notes-toggle" />
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="admin-section">
+      <div class="admin-section-title">Go to Slide</div>
+      <div class="goto-slide">
+        <input type="number" id="goto-input" class="goto-input" min="1" max="81" placeholder="Slide #" />
+        <button id="goto-btn" class="goto-btn">Go</button>
+      </div>
+    </div>
+
+    <div class="admin-section">
+      <div class="admin-section-title">Export</div>
+      <button id="export-pdf" class="export-btn" title="Best results with Chrome → Save as PDF">📄 Export as PDF</button>
+    </div>
+
+    <div class="admin-section">
+      <div class="admin-section-title">Slides</div>
+      <div id="slide-checklist" class="slide-checklist"></div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

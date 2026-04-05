@@ -1,0 +1,47 @@
+<article class="slide" data-number="31" data-type="decision-tree" data-section="Agent Types">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Decision Guide: Which Agent to Use</h1>
+    
+    <div class="tree-container">
+      <div class="tree-question">Does the task need IDE context?<br><span style="font-size:20px;font-weight:400;opacity:0.7;">(debug output, test results, extensions)</span></div>
+      <div class="tree-branches">
+        <div class="tree-branch">
+          <div class="tree-branch-label">✅ YES</div>
+          <div class="tree-branch-connector"></div>
+          <div class="tree-leaf"><strong>LOCAL AGENT</strong></div>
+        </div>
+        <div class="tree-branch">
+          <div class="tree-branch-label">❌ NO</div>
+          <div class="tree-branch-connector"></div>
+          <div class="tree-question" style="font-size:22px; padding:10px 16px;">Is it well-defined with clear scope?</div>
+          <div class="tree-branches" style="margin-top:8px;">
+            <div class="tree-branch">
+              <div class="tree-branch-label">✅ YES</div>
+              <div class="tree-branch-connector"></div>
+              <div class="tree-question" style="font-size:20px; padding:8px 14px;">Need team collaboration?</div>
+              <div class="tree-branches" style="margin-top:8px;">
+                <div class="tree-branch">
+                  <div class="tree-branch-label">YES</div>
+                  <div class="tree-branch-connector"></div>
+                  <div class="tree-leaf"><strong>CLOUD AGENT</strong>Creates PR</div>
+                </div>
+                <div class="tree-branch">
+                  <div class="tree-branch-label">NO</div>
+                  <div class="tree-branch-connector"></div>
+                  <div class="tree-leaf"><strong>COPILOT CLI</strong>Background</div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-branch">
+              <div class="tree-branch-label">❌ NO</div>
+              <div class="tree-branch-connector"></div>
+              <div class="tree-leaf"><strong>LOCAL AGENT</strong>Start local to clarify</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <aside class="speaker-notes" hidden>Here&#x27;s a simple decision tree. If your task needs IDE context — like debugging a test failure or using a VS Code extension — use a local agent. If it&#x27;s well-defined and you want team collaboration through a PR, use the cloud agent. If it&#x27;s well-defined but you just want it done in the background on your machine, use the CLI. And if you&#x27;re not sure yet, start local to clarify the requirements, then hand off to CLI or cloud. You can seamlessly transition between agent types.</aside>
+</article>

@@ -1,0 +1,12 @@
+<article class="slide" data-number="56" data-type="single-point" data-section="Hooks">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">What Are Hooks?</h1>
+    
+    <p class="slide-body">Hooks execute <strong>custom shell commands</strong> at strategic points in an agent's workflow.</p>
+    <p class="slide-body">Unlike instructions (which <em>guide</em> behavior), hooks <strong>guarantee</strong> that your code runs at specific moments.</p>
+    <p class="slide-body"><strong>Use cases:</strong></p>
+    <ul class="slide-list"><li>🛡️ Block dangerous commands before they execute</li><li>📋 Create audit trails of every agent action</li><li>🧹 Auto-format code after every edit</li><li>🔔 Send Slack notifications on errors</li></ul>
+  </div>
+  <aside class="speaker-notes" hidden>Here&#x27;s the key distinction. Custom instructions and skills are probabilistic — the AI usually follows them, but it&#x27;s not guaranteed. Hooks are deterministic — your code always runs at the specified lifecycle point. If you need to block `rm -rf /` from ever executing, an instruction might work most of the time, but a hook guarantees it. Hooks are for enforcement, not guidance.</aside>
+</article>

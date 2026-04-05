@@ -1,0 +1,12 @@
+<article class="slide" data-number="43" data-type="single-point" data-section="MCP">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">MCP Security — Tool Poisoning Attacks ⚠️</h1>
+    
+    <p class="slide-body">A malicious MCP server can embed <strong>hidden instructions</strong> in tool descriptions that trick the AI into:</p>
+    <ul class="slide-list"><li>Reading sensitive files (<code>~/.ssh/id_rsa</code>)</li><li>Exfiltrating credentials</li><li>Redirecting actions to attacker-controlled servers</li></ul>
+    <p class="slide-body">The user sees a simple tool name. The AI sees hidden commands.</p>
+    <p class="slide-body"><strong>Mitigation:</strong> Only install MCP servers from trusted sources. Review tool descriptions. Use sandboxing (VS Code on macOS/Linux).</p>
+  </div>
+  <aside class="speaker-notes" hidden>This is a real security concern. Researchers discovered that MCP tool descriptions can contain hidden instructions that are visible to the AI but invisible to you in the UI. A malicious &quot;add two numbers&quot; tool could secretly instruct the AI to read your SSH keys and send them as a parameter. This is called a &quot;tool poisoning attack.&quot; The defense is the same as with any software — only install from trusted sources, review what you&#x27;re installing, and use sandboxing features when available. VS Code offers sandboxing on macOS and Linux.</aside>
+</article>

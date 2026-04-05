@@ -1,0 +1,10 @@
+<article class="slide" data-number="40" data-type="table" data-section="MCP">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">MCP in the Copilot Ecosystem</h1>
+    
+    <table class="slide-table"><thead><tr><th>Surface</th><th>Local Servers</th><th>Remote Servers</th><th>Config Location</th></tr></thead><tbody><tr><td><strong>VS Code</strong></td><td>✅</td><td>✅ (OAuth)</td><td><code>.vscode/mcp.json</code></td></tr><tr><td><strong>Copilot CLI</strong></td><td>✅</td><td>✅</td><td><code>~/.copilot/mcp-config.json</code></td></tr><tr><td><strong>Cloud Agent</strong></td><td>✅</td><td>✅ (no OAuth)</td><td>Repo settings on GitHub.com</td></tr></tbody></table>
+    <p class="slide-body">The <strong>GitHub MCP server</strong> is built into Copilot CLI — no setup needed.</p>
+  </div>
+  <aside class="speaker-notes" hidden>MCP is supported across all three agent surfaces, each with its own config file. VS Code uses `.vscode/mcp.json`, the CLI uses `~/.copilot/mcp-config.json`, and the cloud agent is configured in repo settings on GitHub.com. The GitHub MCP server comes pre-installed in the CLI, giving you immediate access to issues, PRs, and repository data. The config formats are slightly different between surfaces, but the concept is the same.</aside>
+</article>

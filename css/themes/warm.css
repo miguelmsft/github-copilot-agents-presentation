@@ -1,0 +1,67 @@
+/* ============================================================
+   THEME: Warm — Cream/amber, Playfair Display
+   ============================================================ */
+
+[data-theme="warm"] {
+  --bg-primary: #faf6f1;
+  --bg-secondary: #f0e9df;
+  --bg-card: rgba(0,0,0,0.03);
+  --border-card: rgba(0,0,0,0.08);
+  --text-primary: #2d2a26;
+  --text-secondary: rgba(45,42,38,0.65);
+  --accent-primary: #c47a2e;
+  --accent-secondary: #8b5e3c;
+  --gradient-title: linear-gradient(135deg, #c47a2e, #8b5e3c);
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+[data-theme="warm"] .code-block {
+  background: rgba(0,0,0,0.05);
+  border-color: rgba(0,0,0,0.1);
+  color: #2d2a26;
+}
+
+[data-theme="warm"] .code-block .kw  { color: #b35900; }
+[data-theme="warm"] .code-block .str { color: #0e6b3a; }
+[data-theme="warm"] .code-block .cmt { color: #8a8580; }
+[data-theme="warm"] .code-block .fn  { color: #7c3aed; }
+[data-theme="warm"] .code-block .num { color: #0969da; }
+[data-theme="warm"] .code-block .prop { color: #0969da; }
+[data-theme="warm"] .code-block .tag { color: #0e6b3a; }
+[data-theme="warm"] .code-block .op  { color: #b35900; }
+
+[data-theme="warm"] .slide-table thead th {
+  background: rgba(196,122,46,0.1);
+}
+
+[data-theme="warm"] .slide[data-type="title-slide"] .slide-bg::before {
+  background: radial-gradient(circle, rgba(196,122,46,0.08) 0%, transparent 70%);
+}
+
+[data-theme="warm"] .slide[data-type="title-slide"] .slide-bg::after {
+  background: radial-gradient(circle, rgba(139,94,60,0.06) 0%, transparent 70%);
+}
+
+[data-theme="warm"] .card {
+  background: rgba(0,0,0,0.02);
+  border-color: rgba(0,0,0,0.08);
+  backdrop-filter: none;
+}
+
+[data-theme="warm"] .diagram-block {
+  background: rgba(0,0,0,0.04);
+  color: #c47a2e;
+}
+
+[data-theme="warm"] .slide-quote {
+  background: rgba(0,0,0,0.03);
+  border-color: #c47a2e;
+}
+
+[data-theme="warm"] .speaker-notes-overlay {
+  background: rgba(250,246,241,0.92);
+  border-top-color: rgba(0,0,0,0.1);
+  color: #2d2a26;
+}

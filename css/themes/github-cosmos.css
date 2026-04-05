@@ -1,0 +1,91 @@
+/* ============================================================
+   THEME: GitHub Cosmos (Dark, Default)
+   ============================================================ */
+
+:root, [data-theme="github-cosmos"] {
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-card: rgba(255,255,255,0.03);
+  --border-card: rgba(255,255,255,0.07);
+  --text-primary: #e6edf3;
+  --text-secondary: rgba(230,237,243,0.75);
+  --accent-primary: #58a6ff;
+  --accent-secondary: #bc8cff;
+  --gradient-title: linear-gradient(135deg, #58a6ff, #bc8cff);
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Title slide floating orbs */
+[data-theme="github-cosmos"] .slide[data-type="title-slide"] .slide-bg::before,
+.slide[data-type="title-slide"] .slide-bg::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(188,140,255,0.12) 0%, transparent 70%);
+  top: -120px;
+  right: -100px;
+  animation: orbFloat1 8s ease-in-out infinite;
+}
+
+[data-theme="github-cosmos"] .slide[data-type="title-slide"] .slide-bg::after,
+.slide[data-type="title-slide"] .slide-bg::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(88,166,255,0.1) 0%, transparent 70%);
+  bottom: -80px;
+  left: -60px;
+  animation: orbFloat2 10s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-30px, 20px) scale(1.08); }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -25px) scale(1.05); }
+}
+
+/* Transition slide accent */
+[data-theme="github-cosmos"] .slide[data-type="transition"] .slide-bg::before,
+.slide[data-type="transition"] .slide-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 50%, rgba(88,166,255,0.06) 0%, transparent 60%);
+}
+
+/* Card glassmorphism */
+[data-theme="github-cosmos"] .card,
+:root .card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+}
+
+/* Code block */
+[data-theme="github-cosmos"] .code-block,
+:root .code-block {
+  background: rgba(0,0,0,0.4);
+  border-color: rgba(255,255,255,0.08);
+}
+
+/* Subtle grid pattern for diagram slides */
+[data-theme="github-cosmos"] .slide[data-type="diagram"] .slide-bg::before,
+.slide[data-type="diagram"] .slide-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(88,166,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88,166,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}

@@ -1,0 +1,22 @@
+<article class="slide" data-number="68" data-type="code-example" data-section="Customization">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">Custom Agents (.agent.md)</h1>
+    
+    <p class="slide-body"><code>.github/agents/test-specialist.agent.md</code>:</p>
+    <pre class="code-block"><code><span class="cmt">---</span>
+<span class="prop">name</span>: <span class="str">test-specialist</span>
+<span class="prop">description</span>: <span class="str">Focuses on test quality and coverage</span>
+<span class="prop">tools</span>: [<span class="str">"read"</span>, <span class="str">"edit"</span>, <span class="str">"search"</span>]
+<span class="prop">model</span>: <span class="str">Claude Sonnet 4</span>
+<span class="cmt">---</span>
+
+You are a testing specialist. Your responsibilities:
+
+<span class="cmt">- Analyze existing tests for coverage gaps</span>
+<span class="cmt">- Write unit, integration, and e2e tests</span>
+<span class="cmt">- Ensure tests are isolated and deterministic</span>
+<span class="cmt">- Focus only on test files — never modify production code</span></code></pre>
+  </div>
+  <aside class="speaker-notes" hidden>Custom agents go a step further — they define a specialized persona with tool restrictions. This test specialist can only read, edit, and search — it can't run shell commands or browse the web. Its instructions limit it to test files only. You select it from the agent dropdown in VS Code or the agents panel on GitHub.com. Custom agents are like team roles — you might have a test specialist, a security reviewer, and a planner, each with different capabilities and constraints.</aside>
+</article>

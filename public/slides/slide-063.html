@@ -1,0 +1,10 @@
+<article class="slide" data-number="63" data-type="demo-placeholder" data-section="Hooks">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">🖥️ DEMO: Creating a Security Hook</h1>
+    <div class="demo-badge">🎮 LIVE DEMO</div>
+    <p class="slide-body"><strong>Demo Steps:</strong></p>
+    <ol class="slide-list"><li>Create <code>.github/hooks/</code> directory structure</li><li>Write <code>security-hooks.json</code> with preToolUse hook</li><li>Write <code>security-check.sh</code> to block <code>sudo</code> commands</li><li>Test locally: pipe test JSON to the script</li><li>Start a Copilot CLI session in the repo</li><li>Ask agent to run a <code>sudo</code> command → watch it get blocked</li></ol>
+  </div>
+  <aside class="speaker-notes" hidden>[Live demo] Let me create a security hook from scratch. I&#x27;ll set up the directory structure, write a hook config, and create a script that blocks privilege escalation. Then I&#x27;ll test it locally by piping test input to the script. Finally, I&#x27;ll start a Copilot CLI session and try to get the agent to run `sudo` — you&#x27;ll see the hook intercept and block it.</aside>
+</article>

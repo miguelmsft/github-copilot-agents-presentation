@@ -1,0 +1,41 @@
+<article class="slide" data-number="35" data-type="diagram" data-section="MCP">
+  <div class="slide-bg"></div>
+  <div class="slide-content">
+    <h1 class="slide-title">MCP Architecture</h1>
+    
+    <div class="ecosystem-container">
+      <div class="ecosystem-title">MCP HOST — VS Code / Copilot CLI</div>
+      <div class="ecosystem-row">
+        <div class="ecosystem-item">
+          <div class="ecosystem-item-title">MCP Client #1</div>
+        </div>
+        <div class="ecosystem-item">
+          <div class="ecosystem-item-title">MCP Client #2</div>
+        </div>
+        <div class="ecosystem-item">
+          <div class="ecosystem-item-title">MCP Client #3</div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;gap:80px;margin:8px 0;">
+        <span style="color:var(--accent-primary);">▼</span>
+        <span style="color:var(--accent-primary);">▼</span>
+        <span style="color:var(--accent-primary);">▼</span>
+      </div>
+      <div class="ecosystem-row">
+        <div class="ecosystem-item" style="border-color:var(--accent-primary);">
+          <div class="ecosystem-item-title">🗄️ Database</div>
+          <div class="ecosystem-item-desc">MCP Server</div>
+        </div>
+        <div class="ecosystem-item" style="border-color:var(--accent-primary);">
+          <div class="ecosystem-item-title">🐙 GitHub</div>
+          <div class="ecosystem-item-desc">MCP Server</div>
+        </div>
+        <div class="ecosystem-item" style="border-color:var(--accent-primary);">
+          <div class="ecosystem-item-title">🎭 Playwright</div>
+          <div class="ecosystem-item-desc">MCP Server</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <aside class="speaker-notes" hidden>The architecture has three layers. The Host is your AI application — VS Code, Copilot CLI, Claude. The Host creates one Client per server connection. Each Client talks to exactly one Server. Servers are the providers — a database server, the GitHub server, a Playwright server for web browsing. Each server can expose tools, resources, and prompt templates. The agent discovers what&#x27;s available and uses the right tools for the job.</aside>
+</article>
