@@ -124,15 +124,15 @@
 .handoff-step,
 .spectrum-item,
 .category-item {
-  border-color: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.25);
 }
 
 .flow-connector {
-  background: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.3);
 }
 
 .flow-connector::after {
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.45);
 }
 
 .tree-branch-label {
@@ -146,12 +146,12 @@
 /* Decision tree slides also need brighter borders */
 .slide[data-type="decision-tree"] .tree-question,
 .slide[data-type="decision-tree"] .tree-leaf {
-  border-color: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.25);
 }
 
 /* Boxes slides */
 .slide[data-type="boxes"] .tool-card {
-  border-color: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.25);
 }
 
 /* ---- Boxes slides ---- */
