@@ -63,6 +63,13 @@
   gap: 24px;
 }
 
+/* Code blocks in non-code-example slides should wrap to prevent horizontal scroll */
+.slide:not([data-type="code-example"]) .code-block {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+
 /* ---- Code slides ---- */
 .slide[data-type="code-example"] .slide-content {
   gap: 18px;
