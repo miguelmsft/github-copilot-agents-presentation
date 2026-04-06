@@ -10,13 +10,13 @@
   text-align: left;
 }
 .flow-step { padding: 28px 40px; min-width: 340px; }
-.flow-step-title { font-size: 34px; }
-.flow-step-desc { font-size: 26px; }
+.flow-step-title { font-size: 36px; }
+.flow-step-desc { font-size: 28px; }
 .flow-connector { height: 40px; }
 .tool-card { padding: 40px; }
 .tool-card-icon { font-size: 48px; margin-bottom: 18px; }
-.tool-card-title { font-size: 34px; margin-bottom: 16px; }
-.tool-card-body { font-size: 28px; }
+.tool-card-title { font-size: 36px; margin-bottom: 16px; }
+.tool-card-body { font-size: 30px; }
 .tool-card-body li { padding: 6px 0; }
 .tool-card-footer { font-size: 26px; margin-top: 16px; }
 
@@ -31,12 +31,12 @@
 }
 
 .slide[data-type="title-slide"] .slide-title {
-  font-size: 72px;
+  font-size: 76px;
   font-weight: 700;
 }
 
 .slide[data-type="title-slide"] .slide-subtitle {
-  font-size: 36px;
+  font-size: 38px;
   max-width: 900px;
 }
 
@@ -51,11 +51,11 @@
 }
 
 .slide[data-type="transition"] .slide-title {
-  font-size: 70px;
+  font-size: 74px;
 }
 
 .slide[data-type="transition"] .slide-subtitle {
-  font-size: 34px;
+  font-size: 36px;
 }
 
 /* ---- Single-point slides ---- */
@@ -69,12 +69,13 @@
 }
 
 .slide[data-type="code-example"] .code-block {
-  font-size: 24px;
-  padding: 28px 32px;
+  font-size: 22px;
+  padding: 24px 28px;
+  line-height: 1.5;
 }
 
 .slide[data-type="code-example"] {
-  padding: 26px 56px;
+  padding: 22px 56px;
 }
 
 .slide[data-type="code-example"] .slide-title {
@@ -95,22 +96,22 @@
   height: 12px;
 }
 .slide[data-type="diagram"] .flow-step-title {
-  font-size: 28px;
+  font-size: 30px;
 }
 .slide[data-type="diagram"] .flow-step-desc {
-  font-size: 24px;
+  font-size: 26px;
 }
 .slide[data-type="diagram"] .slide-title {
   font-size: 50px;
 }
 .slide[data-type="diagram"] .ecosystem-item-title {
-  font-size: 28px;
+  font-size: 30px;
 }
 .slide[data-type="diagram"] .ecosystem-item-desc {
-  font-size: 24px;
+  font-size: 26px;
 }
 .slide[data-type="diagram"] .ecosystem-title {
-  font-size: 30px;
+  font-size: 32px;
 }
 
 /* ---- Brighter borders on diagram/visual components ---- */
@@ -482,7 +483,7 @@
 
 .ecosystem-title {
   font-family: var(--font-heading);
-  font-size: 34px;
+  font-size: 36px;
   font-weight: 600;
   color: var(--accent-primary);
   text-align: center;
@@ -511,14 +512,14 @@
 
 .ecosystem-item-title {
   font-family: var(--font-heading);
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 600;
   color: var(--accent-secondary);
   margin-bottom: 10px;
 }
 
 .ecosystem-item-desc {
-  font-size: 28px;
+  font-size: 30px;
   color: var(--text-secondary);
   line-height: 1.4;
 }
@@ -532,7 +533,7 @@
 
 .ecosystem-shared-title {
   font-family: var(--font-heading);
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 600;
   color: var(--accent-secondary);
   margin-bottom: 10px;
@@ -548,7 +549,7 @@
 }
 
 .ecosystem-shared li {
-  font-size: 28px;
+  font-size: 30px;
   color: var(--text-secondary);
 }
 
