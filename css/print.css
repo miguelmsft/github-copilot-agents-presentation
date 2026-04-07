@@ -8,6 +8,15 @@
     margin: 0;
   }
 
+  /* Force browsers to preserve all backgrounds, colors, and images */
+  *, *::before, *::after {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
   html, body {
     width: 10in;
     height: 5.625in;
@@ -33,8 +42,8 @@
     opacity: 1 !important;
     visibility: visible !important;
     display: flex !important;
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
   }
 
   .slide:last-child {
@@ -43,6 +52,14 @@
   }
 
   .slide.print-hidden { display: none !important; }
+
+  /* Preserve gradient titles in print */
+  .slide-title {
+    background: var(--gradient-title) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
 
   /* Hide UI chrome */
   #admin-toggle, #admin-panel, #admin-overlay,
@@ -58,13 +75,8 @@
     max-height: 4.5in !important;
   }
 
-  /* Disable hover effects and animations */
+  /* Disable hover effects */
   .card:hover, .tool-card:hover, .flow-step:hover {
     transform: none !important;
-  }
-
-  * {
-    animation: none !important;
-    transition: none !important;
   }
 }
